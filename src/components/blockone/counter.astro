@@ -1,0 +1,65 @@
+---
+const startDate = new Date(2023, 6, 10, 0, 0, 0); // 10/07/2023 (mes 6 = julio)
+---
+
+<section class="flex flex-col items-center justify-center mt-0 relative">
+  <h2 style="font-family: 'Cherry Bomb One', system-ui;" class="text-white text-7xl mb-4">
+    Tiempo desde que estamos juntos
+  </h2>
+  <div id="counter" style="font-family: 'Allura', cursive;" class=" text-white text-6xl mb-2">
+    <!-- Aquí irá el conteo dinámico -->
+  </div>
+  <p class="text-gray-500 text-3xl mt-2">Vamos por más años</p>
+</section>
+
+<script>
+  // Fecha de inicio: 10/07/2023 (mes 6 = julio)
+  const startDate = new Date(2023, 6, 10, 0, 0, 0);
+
+  function updateCounter() {
+    const now = new Date();
+
+    // Calcular la diferencia total en segundos
+    let diff = Math.floor((now.getTime() - startDate.getTime()) / 1000);
+
+    // Calcular años, meses, días, horas, minutos, segundos
+    let years = now.getFullYear() - startDate.getFullYear();
+    let months = now.getMonth() - startDate.getMonth();
+    let days = now.getDate() - startDate.getDate();
+    let hours = now.getHours() - startDate.getHours();
+    let minutes = now.getMinutes() - startDate.getMinutes();
+    let seconds = now.getSeconds() - startDate.getSeconds();
+
+    if (seconds < 0) {
+      seconds += 60;
+      minutes--;
+    }
+    if (minutes < 0) {
+      minutes += 60;
+      hours--;
+    }
+    if (hours < 0) {
+      hours += 24;
+      days--;
+    }
+    if (days < 0) {
+      // Obtener días del mes anterior
+      const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+      days += prevMonth;
+      months--;
+    }
+    if (months < 0) {
+      months += 12;
+      years--;
+    }
+
+    const counterDiv = document.getElementById('counter');
+    if (counterDiv) {
+      counterDiv.textContent =
+        `${years} años ${months} meses ${days} días ${hours} horas ${minutes} minutos ${seconds} segundos`;
+    }
+  }
+
+  setInterval(updateCounter, 1000);
+  updateCounter();
+</script>
