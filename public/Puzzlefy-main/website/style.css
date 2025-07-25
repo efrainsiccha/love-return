@@ -38,17 +38,6 @@ canvas {
     display: none;
 }
 
-.ui-container {
-    position: fixed;
-    right: 0px;
-    bottom: 0px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-    transition: .25s all;
-}
-
 /* Popup centrado */
 .ui-popup-container {
     display: flex;
@@ -185,6 +174,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 button[type="button"].copy {
