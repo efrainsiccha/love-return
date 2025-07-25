@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzle</title>
+
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- meta -->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<meta name="title" content="Puzzlefy">
+	<meta name="description" content="Solve and share puzzles to your friends!">
+	<meta name="keywords" content="puzzle, jigsaw, p5js, puzzlefy, puzzlify, image to puzzle, image to jigsaw">
+
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="puzzlefy.netlify.app">
+	<meta property="og:url" content="https://puzzlefy.netlify.app">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/fe/Puzzle.jpg">
+	<meta property="og:title" content="Puzzlefy">
+	<meta property="og:description" content="Solve and share puzzles with your friends!">
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- icons -->
+	<script src="https://kit.fontawesome.com/d86c5c458d.js" crossorigin="anonymous"></script>
+</head>
+<body touch-action=none unresolved>
+	<div class="ui disabled">
+
+				<!-- ending -->
+				<div class="ui-popup-container disabled">
+					<div class="ui-popup">
+						<div class="section" style="margin: 10px 10px 0 10px;">
+							<h1 style="font-size:2em;">Felicidades, amor. Lo hiciste muy bien</h1>
+							<p style="font-size:1.2em;">Has completado el rompecabezas 🎉</p>
+						</div>
+						<div class="section" style="margin: 10px;">
+							<a id="again"><button type="button">Reiniciar</button></a>
+						</div>
+					</div>
+					<div class="popup-reference" style="margin-left: 32px; display: flex; flex-direction: column; align-items: center;">
+						<img src="/puzzle/rompecabezas.jpg" alt="Referencia" style="width: 120px; border-radius: 8px; border: 2px solid #888; margin-bottom: 0.5rem;" />
+						<span style="color: white;">Referencia</span>
+					</div>
+				</div>
+				<!-- funcionalidades y otros elementos -->
+				<div class=ui-container>...</div>
+			</div>
+
+	<!-- scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+	<script src=plugins/transform.js></script>
+	<script src=jigsaw.js></script>
+	<script src=script.js></script>
+</body>
+</html>

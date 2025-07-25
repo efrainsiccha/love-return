@@ -1,0 +1,70 @@
+.puzzle-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 2rem 0;
+}
+.puzzle-board {
+  display: grid;
+  grid-template-columns: repeat(4, 64px);
+  grid-template-rows: repeat(4, 64px);
+  gap: 2px;
+  background: #ccc;
+  border: 2px solid #888;
+  box-shadow: 0 2px 8px #0002;
+}
+.puzzle-piece {
+  width: 64px;
+  height: 64px;
+  background-image: url('/puzzle/rompecabezas.jpg');
+  background-size: 256px 256px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+.puzzle-piece.empty {
+  background: #eee;
+  cursor: default;
+}
+.puzzle-piece.dragging {
+  opacity: 0.5;
+  box-shadow: 0 0 8px #0006;
+}
+.puzzle-reference {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.puzzle-reference img {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border: 2px solid #888;
+  margin-bottom: 0.5rem;
+}
+.puzzle-message {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #1a7f37;
+  font-weight: bold;
+  text-align: center;
+}
+.puzzle-reset-btn {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background: #ffb6c1;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.puzzle-reset-btn:hover {
+  background: #ff6f91;
+  color: #fff;
+} 
