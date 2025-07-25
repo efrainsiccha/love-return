@@ -6,3 +6,13 @@
   font-weight: normal;
   font-style: normal;
 }
+
+body, html {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
