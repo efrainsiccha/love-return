@@ -16,3 +16,18 @@ img {
   -webkit-user-drag: none;
   pointer-events: none;
 }
+
+.css-slider-track {
+  display: flex;
+  gap: 16px;
+  width: 6768px; /* (292+16)*22 */
+  animation: scroll-slider 40s linear infinite;
+}
+@keyframes scroll-slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-3384px); /* (292+16)*11 */
+  }
+}

@@ -3,6 +3,9 @@ import "../styles/global.css";
 import '../styles/blurred-header.css';
 import AnimatedBackground from "../components/animatedBackground.astro";
 import BlockOne from "../components/blockone/block.astro";
+import Carousel from "../components/blocktwo/carousel.astro";
+import imagenesUno from '../data/imagenesUno.js';
+import imagenesDos from '../data/imagenesDos.js';
 ---
 
 <html lang="es">
@@ -22,6 +25,8 @@ import BlockOne from "../components/blockone/block.astro";
 	<body>
 		<AnimatedBackground />
 		<BlockOne />
+		<Carousel title="Recuerdos" images={imagenesUno} />
+		<Carousel title="" images={imagenesDos} reverse={true} />
 		<!-- Aquí puedes agregar más bloques, centrados o no -->
 	</body>
 </html>
