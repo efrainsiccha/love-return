@@ -7,6 +7,7 @@ import Carousel from "../components/blocktwo/carousel.astro";
 import imagesOne from '../data/imagesOne.js';
 import imagesTwo from '../data/imagesTwo.js';
 import Puzzle from "../components/blockthree/puzzle.astro";
+import Card from "../components/blockfour/card.astro";
 ---
 
 <html lang="es">
@@ -33,6 +34,7 @@ import Puzzle from "../components/blockthree/puzzle.astro";
 		<Carousel title="Recuerdos" images={imagesOne} />
 		<Carousel title="" images={imagesTwo} reverse={true} />
 		<Puzzle />
+		<Card />
 		<!-- Aquí puedes agregar más bloques, centrados o no -->
 	</body>
 </html>
