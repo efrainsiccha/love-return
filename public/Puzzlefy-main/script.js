@@ -368,7 +368,6 @@ function onSolve() {
     // end form
     setTimeout(() => {
         document.querySelector('.ui-popup-container').classList.remove('disabled')
-        document.querySelector('.ui-popup-container').classList.add('disabled')
     }, 3000)
 }
 
