@@ -38,7 +38,7 @@ function isEncoded(uri) {
 }
 
 function setup() {
-    const imageURL = '/puzzle/rompecabezas.jpg';
+    const imageURL = '/love-return/puzzle/rompecabezas.jpg';
 
     canvas = createCanvas(1000, 1200)
     canvas.parent(document.querySelector('.ui'));
